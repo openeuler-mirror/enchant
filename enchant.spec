@@ -1,6 +1,6 @@
 Name:           enchant
 Version:        1.6.0
-Release:        22
+Release:        23
 Epoch:          1
 Summary:        Generic spell checking library
 
@@ -57,7 +57,8 @@ make install DESTDIR=%{buildroot}
 %ldconfig_scriptlets
 
 %files
-%doc COPYING.LIB AUTHORS
+%doc AUTHORS
+%license COPYING.LIB
 %{_bindir}/enchant
 %{_bindir}/enchant-lsmod
 %{_libdir}/libenchant.so.*
@@ -78,10 +79,16 @@ make install DESTDIR=%{buildroot}
 %{_libdir}/enchant/libenchant_voikko.so
 
 %files help
-%doc README
+%doc README ChangeLog
 %{_mandir}/man1/*.gz
 
 %changelog
+* Sat Oct 19 2019 openEuler Buildteam <buildteam@openeuler.org> - 1:1.6.0-23
+- Type:bugfix
+- Id:NA
+- SUG:NA
+- DESC:change the directory of the license files
+
 * Thu Aug 22 2019 openEuler Buildteam <buildteam@openeuler.org> - 1:1.6.0-22
 - Package Init
 
