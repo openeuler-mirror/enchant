@@ -1,12 +1,12 @@
 Name:           enchant
-Version:        1.6.0
-Release:        23
+Version:        1.6.1
+Release:        1
 Epoch:          1
 Summary:        Generic spell checking library
 
 License:        LGPLv2+
 URL:            https://github.com/AbiWord/enchant
-Source0:        ftp://ftp.netbsd.org/pub/pkgsrc/distfiles/%{name}-%{version}.tar.gz
+Source0:        https://github.com/AbiWord/enchant/releases/download/enchant-1-6-1/%{name}-%{version}.tar.gz
 
 BuildRequires:  aspell-devel automake gcc-c++ hunspell-devel libtool libvoikko-devel
 BuildRequires:  glib2-devel >= 2.6.0
@@ -83,6 +83,12 @@ make install DESTDIR=%{buildroot}
 %{_mandir}/man1/*.gz
 
 %changelog
+* Tue Dec 31 2019 openEuler Buildteam <buildteam@openeuler.org> - 1:1.6.1-1
+- Type:NA
+- Id:NA
+- SUG:NA
+- DESC:update tarball
+
 * Sat Oct 19 2019 openEuler Buildteam <buildteam@openeuler.org> - 1:1.6.0-23
 - Type:bugfix
 - Id:NA
