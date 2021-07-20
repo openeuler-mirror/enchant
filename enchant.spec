@@ -1,6 +1,6 @@
 Name:           enchant
 Version:        1.6.1
-Release:        2
+Release:        3
 Epoch:          1
 Summary:        Generic spell checking library
 
@@ -9,7 +9,7 @@ URL:            https://github.com/AbiWord/enchant
 Source0:        https://github.com/AbiWord/enchant/releases/download/enchant-1-6-1/%{name}-%{version}.tar.gz
 
 BuildRequires:  aspell-devel automake gcc-c++ hunspell-devel libtool libvoikko-devel
-BuildRequires:  glib2-devel >= 2.6.0 gdb
+BuildRequires:  glib2-devel >= 2.6.0
 
 %description
 Enchant aims to provide a simple but comprehensive abstraction for dealing
@@ -83,6 +83,9 @@ make install DESTDIR=%{buildroot}
 %{_mandir}/man1/*.gz
 
 %changelog
+* Thu Jul 20 2021 liuyumeng <liuyumeng5@huawei.com> - 1:1.6.1-3
+- delete gdb in buildrequires
+
 * Sat Mar 21 2020 openEuler Buildteam <buildteam@openeuler.org> - 1:1.6.1-2
 - Type:NA
 - Id:NA
