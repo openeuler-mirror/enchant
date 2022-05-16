@@ -83,7 +83,7 @@ make install DESTDIR=%{buildroot}
 %{_mandir}/man1/*.gz
 
 %changelog
-* Thu Jul 20 2021 liuyumeng <liuyumeng5@huawei.com> - 1:1.6.1-3
+* Tue Jul 20 2021 liuyumeng <liuyumeng5@huawei.com> - 1:1.6.1-3
 - delete gdb in buildrequires
 
 * Sat Mar 21 2020 openEuler Buildteam <buildteam@openeuler.org> - 1:1.6.1-2
