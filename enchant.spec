@@ -1,12 +1,13 @@
 Name:           enchant
 Version:        1.6.1
-Release:        3
+Release:        4
 Epoch:          1
 Summary:        Generic spell checking library
 
 License:        LGPLv2+
 URL:            https://github.com/AbiWord/enchant
 Source0:        https://github.com/AbiWord/enchant/releases/download/enchant-1-6-1/%{name}-%{version}.tar.gz
+Patch0:         enchant-fix-cc.patch
 
 BuildRequires:  aspell-devel automake gcc-c++ hunspell-devel libtool libvoikko-devel
 BuildRequires:  glib2-devel >= 2.6.0
@@ -83,6 +84,9 @@ make install DESTDIR=%{buildroot}
 %{_mandir}/man1/*.gz
 
 %changelog
+* Wed May 10 2023 Xiaoya Huang <huangxiaoya@iscas.ac.cn> - 1:1.6.1-4
+- Fix CC compiler support
+
 * Tue Jul 20 2021 liuyumeng <liuyumeng5@huawei.com> - 1:1.6.1-3
 - delete gdb in buildrequires
 
