@@ -1,6 +1,6 @@
 Name:           enchant
-Version:        2.6.5
-Release:        1
+Version:        1.6.1
+Release:        3
 Epoch:          1
 Summary:        Generic spell checking library
 
@@ -59,35 +59,30 @@ make install DESTDIR=%{buildroot}
 %files
 %doc AUTHORS
 %license COPYING.LIB
-%{_bindir}/enchant-2
-%{_bindir}/enchant-lsmod-2
-%{_libdir}/libenchant-2.so.*
-%{_datadir}/enchant-2/enchant.ordering
+%{_bindir}/enchant
+%{_bindir}/enchant-lsmod
+%{_libdir}/libenchant.so.*
+%{_libdir}/enchant/libenchant_myspell.so
+%{_datadir}/enchant/enchant.ordering
 
 %files devel
-%{_libdir}/libenchant-2.so
-%{_libdir}/pkgconfig/enchant-2.pc
-%{_includedir}/enchant-2/*.h
+%{_libdir}/libenchant.so
+%{_libdir}/pkgconfig/enchant.pc
+%{_includedir}/enchant/*.h
 %{_libdir}/*.a
-%{_libdir}/%{name}-2/*.a
+%{_libdir}/%{name}/*.a
 
 %files aspell
-%{_libdir}/enchant-2/enchant_aspell.so
-%{_libdir}/enchant-2/enchant_hunspell.so
+%{_libdir}/enchant/libenchant_aspell.so
 
 %files voikko
-%{_libdir}/enchant-2/enchant_voikko.so
+%{_libdir}/enchant/libenchant_voikko.so
 
 %files help
 %doc README ChangeLog
 %{_mandir}/man1/*.gz
-%{_mandir}/man5/*.gz
-%{_docdir}/enchant/*.html
 
 %changelog
-* Tue Jan 16 2024 wangqia <wangqia@uniontech.com> - 1:2.6.5-1
-- Update to upstream version 2.6.5
-
 * Tue Jul 20 2021 liuyumeng <liuyumeng5@huawei.com> - 1:1.6.1-3
 - delete gdb in buildrequires
 
